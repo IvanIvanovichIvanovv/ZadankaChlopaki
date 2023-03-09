@@ -24,7 +24,7 @@ namespace Testy
         public void Posortuj_liste_od_min_do_max()
         {
             List<int> list = new List<int>() { 10, 1, 13, 2, 6, 9, 6, 7, 8, 9, 12, 4, -5 };
-
+            //test 2
             List<int> result = new();
 
             CollectionAssert.AreEqual(new List<int>() { -5, 1, 2, 4, 6, 6, 7, 8, 9, 9, 10, 12, 13 }, result);
