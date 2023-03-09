@@ -11,21 +11,21 @@ namespace Testy
         [TestMethod]
         public void Pole_Kwadratu_4x4_metoda()
         {
-            int result = Program.PoleKwadratu();
+            int result = Program.PoleKwadratu(4);
 
             Assert.AreEqual(16, result);
         }
         [TestMethod]
         public void Pole_Prostokata_6x9_metoda()
         {
-            int result = 0;
+            int result = Program.PoleProstokata(6, 9);
 
             Assert.AreEqual(54, result);
         }
         [TestMethod]
         public void Pole_Trojkata_2x8_metoda()
         {
-            int result = 0;
+            int result = Program.PoleTrojkata(2,8);
 
             Assert.AreEqual(8, result);
         }
@@ -33,35 +33,35 @@ namespace Testy
         [TestMethod]
         public void Obwod_Kwadratu_4x4_Metoda() 
         {
-            int result = 0;
+            int result = Program.ObwodKwadratu(4);
 
             Assert.AreEqual(16,result);
         }
         [TestMethod]
         public void Obwod_Prostokata_6x9_Metoda()
         {
-            int result = 0;
+            int result = Program.ObwodProstokata(6,9);
 
             Assert.AreEqual(30, result);
         }
         [TestMethod]
         public void Obwod_Trojkata_3x4x5_Metoda()
         {
-            int result = 0;
+            int result = Program.ObwodTrojkata(3,4,5);
 
             Assert.AreEqual(12, result);
         }
         [TestMethod]
         public void Czy_Trojkat_Istnieje_3x4x5() 
         {
-            bool result = false;
+            bool result = Program.TrojkatIstnieje(3,4,5);
 
             Assert.IsTrue(result);
         }
         [TestMethod]
         public void Czy_Trojkat_Istnieje_1x4x5()
         {
-            bool result = false;
+            bool result = Program.TrojkatIstnieje(1, 4, 5);
 
             Assert.IsFalse(result);
         }
