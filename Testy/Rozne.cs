@@ -82,6 +82,7 @@ namespace Testy
         public void Wytnij_parzyste_litery()
         {
             string zadanko = "DlugieSlowo";
+            char[] charArray=zadanko.ToCharArray(); //podpowiadajka
             string result = "";
 
             Assert.AreEqual("DuiSoo", result);
