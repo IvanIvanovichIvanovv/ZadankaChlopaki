@@ -6,6 +6,9 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
+            int a =5; int b =10;
+            int[] test = Zamiana(a, b);
+            Console.WriteLine(test[0]+" " + test[1]);
             Console.ReadLine();
         }
         public static int PoleKwadratu(int a)
@@ -47,7 +50,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
         {
             if (TrojkatIstnieje(a, b, c)) 
             {
-                return a + b + c;
+                return Math.Abs(a)+ Math.Abs(b)+ Math.Abs(c);
             }
             return -1;
         }
@@ -58,6 +61,14 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
                 return -1;
             }
             return Math.Abs((a * h) / 2);
+        }
+        public static int[] Zamiana(int a,int b) 
+        {
+            int[] values = new int[2] { a, b };
+            values[0] += values[1];
+            values[1] = values[0] - values[1];
+            values[0] -= values[1];
+            return values;
         }
 
     }

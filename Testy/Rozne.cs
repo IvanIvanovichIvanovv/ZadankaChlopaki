@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ZadankaChlopaki;
 
@@ -12,12 +13,11 @@ namespace Testy
         [TestMethod]
         public void Zamiana_A_i_B_bez_trzeciej_zmiennej()
         {
-            int a = 5;
-            int b = 10;
-            //test
+            int[] values = new int[2] { 5, 10 };
+            int[] result = Program.Zamiana(values[0], values[1]);
 
-            Assert.AreEqual(10, a);
-            Assert.AreEqual(5, b);
+            Assert.AreEqual(result [0], 10);
+            Assert.AreEqual(result[1],5);
         }
         [TestMethod]
         public void Posortuj_liste_od_min_do_max()
