@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ZadankaChlopaki;
 
@@ -77,12 +78,59 @@ namespace Testy
             Assert.AreEqual("aknadaz", result);
         }
         [TestMethod]
-        public void Wytnij_parzyste_litery() 
+        public void Wytnij_parzyste_litery()
         {
             string zadanko = "DlugieSlowo";
             string result = "";
 
             Assert.AreEqual("DuiSoo", result);
         }
+        [TestMethod]
+        public void Miejsca_zerowe_x2_30x_m180()
+        {
+            int result1 = 0;
+            int result2 = 0;
+
+            Assert.AreEqual(30, result1);
+            Assert.AreEqual(-60, result2);
+        }
+        [TestMethod]
+        public void Reszta_z_dzielenia_przez_69_420() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(6, result);
+        }
+        [TestMethod]
+        public void NWW_42_91() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(546,result);
+        }
+        [TestMethod]
+        public void NWD_42_91() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(7, result);
+        }
+        [TestMethod]
+        public void Rozklad_na_czynniki_pierwsze() 
+        {
+            List<int> result = new List<int>();
+
+            CollectionAssert.AreEqual(new List<int>() { 2,3,7}, result);
+        }
+        [TestMethod]
+        public void Potega() 
+        {
+            int number = 0;
+            int power = 0;
+
+            int result = 0;
+            Assert.AreEqual(Math.Pow(number, power), result);
+        }
+
     }
 }
