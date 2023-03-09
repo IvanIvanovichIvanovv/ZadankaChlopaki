@@ -52,7 +52,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             return -1;
         }
         public static int PoleTrojkata(int a ,int h) 
-        {
+        {//
             if (a == 0 || h == 0) 
             {
                 return -1;
