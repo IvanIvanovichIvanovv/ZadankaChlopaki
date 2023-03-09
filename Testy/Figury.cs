@@ -6,12 +6,12 @@ namespace Testy
     [TestClass]
     public class Figury
     {
-        Program _program=new Program();
+        static Program _program=new Program();
         #region Metody
         [TestMethod]
         public void Pole_Kwadratu_4x4_metoda()
         {
-            int result = 0; //_program.PoleKwadratu(4, 4);
+            int result = Program.PoleKwadratu();
 
             Assert.AreEqual(16, result);
         }

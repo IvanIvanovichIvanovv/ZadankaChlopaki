@@ -8,14 +8,13 @@ namespace Testy
     [TestClass]
     public class Rozne
     {
-        Program _program = new Program();
+         static Program _program = new Program();
         [TestMethod]
         public void Zamiana_A_i_B_bez_trzeciej_zmiennej()
         {
             int a = 5;
             int b = 10;
-             //test
-
+            //test
 
             Assert.AreEqual(10, a);
             Assert.AreEqual(5, b);
