@@ -84,66 +84,77 @@ namespace Testy
 
             Assert.AreEqual(result, 4);
         }
+        [TestMethod]
         public void Pole_Kwadratu_0_metoda()
         {
             int result = 0;
 
             Assert.AreEqual(result, 0);
         }
+        [TestMethod]
         public void Obwod_Kwadratu_m3() 
         {
             int result = 0;
 
             Assert.AreEqual(result, 9);
         }
+        [TestMethod]
         public void Obwod_Kwadratu_0()
         {
             int result = 0;
 
             Assert.AreEqual(result, -1);
         }
+        [TestMethod]
         public void Pole_Prostokata_m2_5_metoda()
         {
             int result = 0;
 
             Assert.AreEqual(result, 10);
         }
+        [TestMethod]
         public void Pole_Prostokata_m2_0_metoda()
         {
             int result = 0;
 
             Assert.AreEqual(result, -1);
         }
+        [TestMethod]
         public void Obwod_Prostokata_m2_5() 
         {
             int result = 0;
 
             Assert.AreEqual(result, 14);
         }
+        [TestMethod]
         public void Obwod_Prostokata_0_5()
         {
             int result = 0;
 
             Assert.AreEqual(result, -1);
         }
+        [TestMethod]
         public void Pole_Trojkata_m2_4() 
         {
             int result = 0;
 
             Assert.AreEqual(result, 4);
         }
+        [TestMethod]
         public void Pole_Trojkata_0_4()
         {
             int result = 0;
 
             Assert.AreEqual(result, -1);
         }
+        [TestMethod]
         public void Obwod_Trojkata_3_m4_5() 
         {
             int result = 0;
 
             Assert.AreEqual(result, 12);
         }
+        [TestMethod]
         public void Obwod_Trojkata_3_0_5()
         {
             int result = 0;
