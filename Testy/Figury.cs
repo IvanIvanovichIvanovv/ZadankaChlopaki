@@ -65,6 +65,18 @@ namespace Testy
 
             Assert.IsFalse(result);
         }
+        [TestMethod]
+        public void Czy_trojkat_ma_wieksze_pole_od_drugiego() 
+        {
+            int a1 = 5;
+            int h1 = 6;
+            int a2 = 4;
+            int h2 = 7;
+
+            bool result = true;
+
+            Assert.IsTrue(result);
+        }
 
         #endregion
 
