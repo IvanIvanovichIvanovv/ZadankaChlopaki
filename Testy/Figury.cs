@@ -89,14 +89,14 @@ namespace Testy
         {
             int result = 0;
 
-            Assert.AreEqual(result, 0);
+            Assert.AreEqual(result, -1);
         }
         [TestMethod]
         public void Obwod_Kwadratu_m3() 
         {
             int result = 0;
 
-            Assert.AreEqual(result, 9);
+            Assert.AreEqual(result, 12);
         }
         [TestMethod]
         public void Obwod_Kwadratu_0()
