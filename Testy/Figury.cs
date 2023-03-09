@@ -77,6 +77,80 @@ namespace Testy
 
             Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void Pole_Kwadratu_m2_metoda() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 4);
+        }
+        public void Pole_Kwadratu_0_metoda()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 0);
+        }
+        public void Obwod_Kwadratu_m3() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 9);
+        }
+        public void Obwod_Kwadratu_0()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        public void Pole_Prostokata_m2_5_metoda()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 10);
+        }
+        public void Pole_Prostokata_m2_0_metoda()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        public void Obwod_Prostokata_m2_5() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 14);
+        }
+        public void Obwod_Prostokata_0_5()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        public void Pole_Trojkata_m2_4() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 4);
+        }
+        public void Pole_Trojkata_0_4()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        public void Obwod_Trojkata_3_m4_5() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 12);
+        }
+        public void Obwod_Trojkata_3_0_5()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+
 
         #endregion
 
