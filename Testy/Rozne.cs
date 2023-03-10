@@ -86,12 +86,12 @@ namespace Testy
             Assert.AreEqual("DuiSoo", result);
         }
         [TestMethod]
-        public void Miejsca_zerowe_x2_30x_m180()
+        public void Miejsca_zerowe_4x2_12x_m16()
         {
             int[] miejsca_zerowe = Program.Miejsca_Zerowe(2, 30, -180);
 
-            Assert.AreEqual(30, miejsca_zerowe[0]);
-            Assert.AreEqual(-60, miejsca_zerowe[1]);
+            Assert.AreEqual(1, miejsca_zerowe[0]);
+            Assert.AreEqual(-4, miejsca_zerowe[1]);
         }
         [TestMethod]
         public void Reszta_z_dzielenia_przez_69_420()
@@ -129,6 +129,20 @@ namespace Testy
 
             int result = Program.Potega(number, power);
             Assert.AreEqual(Math.Pow(number, power), result);
+        }
+        [TestMethod]
+        public void Pierwiastek_16() 
+        {
+            int result = Program.Pierwiastek(16, 2);
+
+            Assert.AreEqual(result, 4);
+        }
+        [TestMethod]
+        public void Pierwiastek_27_3()
+        {
+            int result = Program.Pierwiastek(27, 3);
+
+            Assert.AreEqual(result, 3);
         }
 
     }
