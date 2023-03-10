@@ -7,7 +7,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
-
+            int[] result = Miejsca_Zerowe(4, 12, -16);
             Console.ReadLine();
         }
 
@@ -134,8 +134,8 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             int[] result= new int[2];
 
             int delta = Potega(x, 2) - (4 * x2 * c);
-            result[0] = (-x - Pierwiastek(delta, 2)) / 2;
-            result[1] = (-x + Pierwiastek(delta, 2)) / 2;
+            result[1] = (-x - Pierwiastek(delta, 2)) / (2*x2);
+            result[0] = (-x + Pierwiastek(delta, 2)) / (2*x2);
 
             return result;
         }
@@ -152,19 +152,11 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
         }
         public static int Pierwiastek(int a ,int b) 
         {
-            for(int i = 1; i <= a; i++) 
+            for(int i = 0; i < a; i++) 
             {
-                int temp = a;
-                for(int j = 0; j < b; j++) 
-                {
-                    temp /= i;
-                }
-                if (temp == a) 
-                {
-                    return i;
-                }
+                if(Potega(i,b)==a) return i;
             }
-            return -1; 
+            return -1;
         }
     }
 }

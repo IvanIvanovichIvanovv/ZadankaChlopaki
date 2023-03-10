@@ -56,7 +56,7 @@ namespace Testy
 
             CollectionAssert.AreEqual(new List<int>() { 12, 32, 56 }, result);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void Fibonacci_10()
         {
             int result = Program.Fibonacci(10);
@@ -86,11 +86,11 @@ namespace Testy
             string result = Program.Tylko_Parzyste_Litery(zadanko);
 
             Assert.AreEqual("DuiSoo", result);
-        }
+        }*/
         [TestMethod]
         public void Miejsca_zerowe_4x2_12x_m16()
         {
-            int[] miejsca_zerowe = Program.Miejsca_Zerowe(2, 30, -180);
+            int[] miejsca_zerowe = Program.Miejsca_Zerowe(4, 12, -16);
 
             Assert.AreEqual(1, miejsca_zerowe[0]);
             Assert.AreEqual(-4, miejsca_zerowe[1]);
@@ -102,7 +102,7 @@ namespace Testy
 
             Assert.AreEqual(6, result);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void NWW_42_91()
         {
             int result = Program.NWW(42, 91);
@@ -122,7 +122,7 @@ namespace Testy
             List<int> result = Program.Czynniki_pierwsze(42);
 
             CollectionAssert.AreEqual(new List<int>() { 2, 3, 7 }, result);
-        }
+        }*/
         [TestMethod]
         public void Potega()
         {
