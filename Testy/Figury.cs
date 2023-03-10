@@ -74,7 +74,7 @@ namespace Testy
             int a2 = 4;
             int h2 = 7;
 
-            bool result = true;
+            bool result = Program.Czy_pierwszy_wiekszy_od_drugiego(5, 6, 4, 7);
 
             Assert.IsTrue(result);
         }
