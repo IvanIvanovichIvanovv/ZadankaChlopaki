@@ -6,7 +6,9 @@ namespace Testy
     [TestClass]
     public class Figury
     {
-        static Program _program = new Program();
+
+        static Program _program=new Program(); //dd
+
         #region Metody
         [TestMethod]
         public void Pole_Kwadratu_4x4_metoda()
@@ -19,6 +21,7 @@ namespace Testy
         public void Pole_Prostokata_6x9_metoda()
         {
             int result = Program.PoleProstokata(6, 9);
+            int result = Program.PoleProstokata(6,9);
 
             Assert.AreEqual(54, result);
         }
