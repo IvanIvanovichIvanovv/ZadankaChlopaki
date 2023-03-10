@@ -69,5 +69,59 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             values[0] -= values[1];
             return values;
         }
+        public static List<int> List_Sort(List<int> list)
+        {
+
+            for (int j = 0; j < list.Count; j++)
+            {
+                int index = 0;
+                int max = list[0];
+                for (int i = 0; i < list.Count - j; i++)
+                {
+                    if (list[i] >= max)
+                    {
+                        max = list[i];
+                        index = i;
+                    }
+                }
+                SwapListElement(list, index, list.Count - 1 - j);
+            }
+            return list;
+        }
+        public static void SwapListElement(List<int> list, int a, int b)
+        {
+            int c = list[a];
+            list[a] = list[b];
+            list[b] = c;
+        }
+        public static List<int> TylkoParzyste(List<int> list)
+        {
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                if (list[i] % 2 != 0)
+                {
+                    list.RemoveAt(i);
+                }
+            }
+            return list;
+        }
+        public static List<int> TylkoDodatnie(List<int> list)
+        {
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                if (list[i] <= 0)
+                {
+                    list.RemoveAt(i);
+                }
+            }
+            return list;
+        }
+        public static List<int> Dodatnie_Parzyste_Sort(List<int> list)
+        {
+            TylkoParzyste(list);
+            TylkoDodatnie(list);
+            List_Sort(list);
+            return list;
+        }
     }
 }
