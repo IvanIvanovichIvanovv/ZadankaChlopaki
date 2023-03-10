@@ -65,7 +65,7 @@ namespace Testy
 
             Assert.IsFalse(result);
         }
-        /*[TestMethod]
+        [TestMethod]
         public void Czy_trojkat_ma_wieksze_pole_od_drugiego()
         {
             int a1 = 5;
@@ -76,7 +76,7 @@ namespace Testy
             bool result = Program.Czy_pierwszy_wiekszy_od_drugiego(5, 6, 4, 7);
 
             Assert.IsTrue(result);
-        }*/
+        }
         [TestMethod]
         public void Pole_Kwadratu_m2_metoda()
         {

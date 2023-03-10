@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
+﻿using System.CodeDom.Compiler;
 
 namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
 {
@@ -7,7 +6,11 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
-            int[] result = Miejsca_Zerowe(4, 12, -16);
+            List<int> pierwsze = Czynniki_pierwsze(42);
+            for(int i = 0; i < pierwsze.Count; i++) 
+            {
+                Console.WriteLine(pierwsze[i]);
+            }
             Console.ReadLine();
         }
 
@@ -124,18 +127,18 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             List_Sort(list);
             return list;
         }
-        public static int Modulo(int a,int b) 
+        public static int Modulo(int a, int b)
         {
             int c = b / a;
             return b - (a * c);
         }
-        public static int[] Miejsca_Zerowe(int x2,int x,int c) 
+        public static int[] Miejsca_Zerowe(int x2, int x, int c)
         {
-            int[] result= new int[2];
+            int[] result = new int[2];
 
             int delta = Potega(x, 2) - (4 * x2 * c);
-            result[1] = (-x - Pierwiastek(delta, 2)) / (2*x2);
-            result[0] = (-x + Pierwiastek(delta, 2)) / (2*x2);
+            result[1] = (-x - Pierwiastek(delta, 2)) / (2 * x2);
+            result[0] = (-x + Pierwiastek(delta, 2)) / (2 * x2);
 
             return result;
         }
@@ -143,18 +146,134 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
         {
             int result = 1;
 
-            for (int i = 0; i < potega; i++) 
+            for (int i = 0; i < potega; i++)
             {
                 result *= liczba;
             }
 
             return result;
         }
-        public static int Pierwiastek(int a ,int b) 
+        public static int Pierwiastek(int a, int b)
         {
-            for(int i = 0; i < a; i++) 
+            for (int i = 0; i < a; i++)
             {
-                if(Potega(i,b)==a) return i;
+                if (Potega(i, b) == a) return i;
+            }
+            return -1;
+        }
+        public static bool Czy_pierwszy_wiekszy_od_drugiego(int a1, int h1, int a2, int h2)
+        {
+            if (PoleTrojkata(a1, h1) > PoleTrojkata(a2, h2))
+            {
+                return true;
+            }
+            return false;
+        }
+        public static string Tylko_Parzyste_Litery(string wyraz)
+        {
+            char[] znaki = wyraz.ToCharArray();
+            string result = "";
+            for (int i = 0; i < znaki.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result += znaki[i];
+                }
+            }
+            return result;
+        }
+        public static string Odwroc_Napis(string wyraz)
+        {
+            char[] znaki = wyraz.ToCharArray();
+            string result = "";
+            for (int i = znaki.Length - 1; i >= 0; i--)
+            {
+                result += znaki[i];
+            }
+            return result;
+        }
+        public static int Fibonacci(int n)
+        {
+            int number = n - 1;
+            int[] Fib = new int[number + 1];
+            Fib[0] = 0;
+            Fib[1] = 1;
+            for (int i = 2; i <= number; i++)
+            {
+                Fib[i] = Fib[i - 2] + Fib[i - 1];
+            }
+            return Fib[number];
+        }
+        public static List<int> LiczbyPierwsze(int start, int koniec)
+        {
+            int counter = 0;
+            List<int> result = new List<int>();
+
+            for(int i =start; i <= koniec; i++) 
+            {
+                for(int j=1;j <= koniec; j++) 
+                {
+                    if (i % j == 0) 
+                    {
+                        counter++;
+                    }
+                }
+                if (counter == 2) 
+                {
+                    result.Add(i);
+                }
+                counter = 0;
+            }
+            return result;
+        }
+        public static int NWW(int a,int b) 
+        {
+            int x = a * b;
+            int w = 0;
+
+            while (b != 0) 
+            {
+                w = a % b;
+                a = b;
+                b = w;
+            }
+            return x / a;
+        }
+        public static int NWD(int a,int b) 
+        {
+            int w = 0;
+
+            while (b != 0)
+            {
+                w = a % b;
+                a = b;
+                b = w;
+            }
+            return a;
+        }
+        public static List<int> Czynniki_pierwsze(int x) 
+        {
+            int i = 2;
+            List<int> result= new List<int>();  
+            while (i <= x)
+            {
+                while ((x % i) == 0)
+                {
+                    x /= i;
+                    result.Add(i);
+                }
+                i++;
+            }
+            return result;
+        }
+        public static int ND(int a) 
+        {
+            for (int i = a-1; i > a; i--) 
+            {
+                if ((a % i) == 0) 
+                {
+                    return i;
+                }
             }
             return -1;
         }
