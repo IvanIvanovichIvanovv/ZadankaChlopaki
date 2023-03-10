@@ -126,8 +126,8 @@ namespace Testy
         [TestMethod]
         public void Potega()
         {
-            int number = 0;
-            int power = 0;
+            int number = 8;
+            int power = 3;
 
             int result = Program.Potega(number, power);
             Assert.AreEqual(Math.Pow(number, power), result);
