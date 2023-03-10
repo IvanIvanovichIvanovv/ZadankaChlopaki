@@ -6,11 +6,14 @@ namespace Testy
     [TestClass]
     public class Figury
     {
+
         static Program _program=new Program(); //dd
+
         #region Metody
         [TestMethod]
         public void Pole_Kwadratu_4x4_metoda()
         {
+
             int result = Program.PoleKwadratu(4);
 
             Assert.AreEqual(16, result);
@@ -61,7 +64,7 @@ namespace Testy
         [TestMethod]
         public void Czy_Trojkat_Istnieje_1x4x5()
         {
-            bool result = false;
+            bool result = true;
 
             Assert.IsFalse(result);
         }
@@ -77,6 +80,91 @@ namespace Testy
 
             Assert.IsTrue(result);
         }
+        [TestMethod]
+        public void Pole_Kwadratu_m2_metoda() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 4);
+        }
+        [TestMethod]
+        public void Pole_Kwadratu_0_metoda()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        [TestMethod]
+        public void Obwod_Kwadratu_m3() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 12);
+        }
+        [TestMethod]
+        public void Obwod_Kwadratu_0()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        [TestMethod]
+        public void Pole_Prostokata_m2_5_metoda()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 10);
+        }
+        [TestMethod]
+        public void Pole_Prostokata_m2_0_metoda()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        [TestMethod]
+        public void Obwod_Prostokata_m2_5() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 14);
+        }
+        [TestMethod]
+        public void Obwod_Prostokata_0_5()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        [TestMethod]
+        public void Pole_Trojkata_m2_4() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 4);
+        }
+        [TestMethod]
+        public void Pole_Trojkata_0_4()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+        [TestMethod]
+        public void Obwod_Trojkata_3_m4_5() 
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, 12);
+        }
+        [TestMethod]
+        public void Obwod_Trojkata_3_0_5()
+        {
+            int result = 0;
+
+            Assert.AreEqual(result, -1);
+        }
+
 
         #endregion
 
