@@ -14,12 +14,10 @@ namespace Testy
         public void Zamiana_A_i_B_bez_trzeciej_zmiennej()
         {
             int[] values = new int[2] { 5, 10 };
+            int[] result = Program.Zamiana(values[0], values[1]);
 
-            int[] result = 
-
-            Assert.AreEqual(result[0], 10);
-            Assert.AreEqual(result[1], 5);
-
+            Assert.AreEqual(result [0], 10);
+            Assert.AreEqual(result[1],5);
         }
         [TestMethod]
         public void Posortuj_liste_od_min_do_max()
