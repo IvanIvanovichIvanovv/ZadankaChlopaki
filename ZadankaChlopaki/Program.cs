@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
 {
@@ -122,6 +123,48 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             TylkoDodatnie(list);
             List_Sort(list);
             return list;
+        }
+        public static int Modulo(int a,int b) 
+        {
+            int c = b / a;
+            return b - (a * c);
+        }
+        public static int[] Miejsca_Zerowe(int x2,int x,int c) 
+        {
+            int[] result= new int[2];
+
+            int delta = Potega(x, 2) - (4 * x2 * c);
+            result[0] = (-x - Pierwiastek(delta, 2)) / 2;
+            result[1] = (-x + Pierwiastek(delta, 2)) / 2;
+
+            return result;
+        }
+        public static int Potega(int liczba, int potega)
+        {
+            int result = 1;
+
+            for (int i = 0; i < potega; i++) 
+            {
+                result *= liczba;
+            }
+
+            return result;
+        }
+        public static int Pierwiastek(int a ,int b) 
+        {
+            for(int i = 1; i <= a; i++) 
+            {
+                int temp = a;
+                for(int j = 0; j < b; j++) 
+                {
+                    temp /= i;
+                }
+                if (temp == a) 
+                {
+                    return i;
+                }
+            }
+            return -1; 
         }
     }
 }
