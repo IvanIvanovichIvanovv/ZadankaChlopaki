@@ -9,15 +9,17 @@ namespace Testy
     [TestClass]
     public class Rozne
     {
-         static Program _program = new Program();
+        static Program _program = new Program();
         [TestMethod]
         public void Zamiana_A_i_B_bez_trzeciej_zmiennej()
         {
             int[] values = new int[2] { 5, 10 };
             int[] result = Program.Zamiana(values[0], values[1]);
 
-            Assert.AreEqual(result [0], 10);
-            Assert.AreEqual(result[1],5);
+
+            Assert.AreEqual(result[0], 10);
+            Assert.AreEqual(result[1], 5);
+
         }
         [TestMethod]
         public void Posortuj_liste_od_min_do_max()
@@ -81,7 +83,7 @@ namespace Testy
         public void Wytnij_parzyste_litery()
         {
             string zadanko = "DlugieSlowo";
-            char[] charArray=zadanko.ToCharArray(); //podpowiadajka
+            char[] charArray = zadanko.ToCharArray(); //podpowiadajka
             string result = "";
 
             Assert.AreEqual("DuiSoo", result);
@@ -96,35 +98,35 @@ namespace Testy
             Assert.AreEqual(-60, result2);
         }
         [TestMethod]
-        public void Reszta_z_dzielenia_przez_69_420() 
+        public void Reszta_z_dzielenia_przez_69_420()
         {
             int result = 0;
 
             Assert.AreEqual(6, result);
         }
         [TestMethod]
-        public void NWW_42_91() 
+        public void NWW_42_91()
         {
             int result = 0;
 
-            Assert.AreEqual(546,result);
+            Assert.AreEqual(546, result);
         }
         [TestMethod]
-        public void NWD_42_91() 
+        public void NWD_42_91()
         {
             int result = 0;
 
             Assert.AreEqual(7, result);
         }
         [TestMethod]
-        public void Rozklad_na_czynniki_pierwsze() 
+        public void Rozklad_na_czynniki_pierwsze()
         {
             List<int> result = new List<int>();
 
-            CollectionAssert.AreEqual(new List<int>() { 2,3,7}, result);
+            CollectionAssert.AreEqual(new List<int>() { 2, 3, 7 }, result);
         }
         [TestMethod]
-        public void Potega() 
+        public void Potega()
         {
             int number = 0;
             int power = 0;
