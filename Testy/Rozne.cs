@@ -88,7 +88,7 @@ namespace Testy
         [TestMethod]
         public void Miejsca_zerowe_4x2_12x_m16()
         {
-            int[] miejsca_zerowe = Program.Miejsca_Zerowe(2, 30, -180);
+            int[] miejsca_zerowe = Program.Miejsca_Zerowe(4, 12, -16);
 
             Assert.AreEqual(1, miejsca_zerowe[0]);
             Assert.AreEqual(-4, miejsca_zerowe[1]);
@@ -124,8 +124,8 @@ namespace Testy
         [TestMethod]
         public void Potega()
         {
-            int number = 0;
-            int power = 0;
+            int number = 8;
+            int power = 3;
 
             int result = Program.Potega(number, power);
             Assert.AreEqual(Math.Pow(number, power), result);
