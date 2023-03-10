@@ -26,7 +26,7 @@ namespace Testy
         {
             List<int> list = new List<int>() { 10, 1, 13, 2, 6, 9, 6, 7, 8, 9, 12, 4, -5 };
             //test 2
-            List<int> result = Program.List_Sort(list);
+            List<int> result = new();
 
             CollectionAssert.AreEqual(new List<int>() { -5, 1, 2, 4, 6, 6, 7, 8, 9, 9, 10, 12, 13 }, result);
         }
@@ -35,7 +35,7 @@ namespace Testy
         {
             List<int> list = new List<int>() { 0, 3, 1, 7, 8, 148, 69 };
 
-            List<int> result = Program.TylkoParzyste(list);
+            List<int> result = new();
 
             CollectionAssert.AreEqual(new List<int>() { 0, 8, 148 }, result);
         }
@@ -44,7 +44,7 @@ namespace Testy
         {
             List<int> list = new List<int>() { 0, -18, 12, -46, 223, 12, 1, -53, 45 };
 
-            List<int> result = Program.TylkoDodatnie(list);
+            List<int> result = new();
 
             CollectionAssert.AreEqual(new List<int>() { 12, 223, 12, 1, 45 }, result);
         }
@@ -53,7 +53,7 @@ namespace Testy
         {
             List<int> list = new List<int>() { 321, 123, 0, -34, 33, 89, 3, -69, 69, 12, 56, 32, 11 };
 
-            List<int> result = Program.Dodatnie_Parzyste_Sort(list);
+            List<int> result = new();
 
             CollectionAssert.AreEqual(new List<int>() { 12, 32, 56 }, result);
         }
