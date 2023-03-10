@@ -9,5 +9,10 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
 
             Console.ReadLine();
         }
+
+        public static int PoleKwadratu(int a)
+        {
+            return a * a;
+        }
     }
 }
