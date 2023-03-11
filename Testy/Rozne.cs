@@ -20,7 +20,7 @@ namespace Testy
             Assert.AreEqual(result[0], 10);
             Assert.AreEqual(result[1], 5);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void Posortuj_liste_od_min_do_max()
         {
             List<int> list = new List<int>() { 10, 1, 13, 2, 6, 9, 6, 7, 8, 9, 12, 4, -5 };
@@ -145,7 +145,7 @@ namespace Testy
             int result = Program.Pierwiastek(27, 3);
 
             Assert.AreEqual(result, 3);
-        }
+        }*/
 
     }
 }

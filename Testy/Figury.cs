@@ -12,7 +12,7 @@ namespace Testy
         public void Pole_Kwadratu_4x4_metoda()
         {
 
-            int result = Program.PoleKwadratu(4) ; //_program.PoleKwadratu(4, 4);
+            int result = Program.PoleKwadratu(4) ; //Program.PoleKwadratu(4, 4);
 
             Assert.AreEqual(16, result);
         }
