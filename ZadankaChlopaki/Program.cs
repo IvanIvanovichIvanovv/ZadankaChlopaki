@@ -6,17 +6,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
-            List<int> list = new List<int>() { 0, -18, 12, -46, 223, 12, 1, -53, 45 };
-
-            List<int> result = Program.TylkoDodatnie(list);
-
-            Console.WriteLine(result[0]);
-            Console.WriteLine(result[1]);
-            Console.WriteLine(result[2]);
-            Console.WriteLine(result[3]);
-            Console.WriteLine(result[4]);
-
-
+            
             Console.ReadLine();
         }
         public static int modul(int a)
@@ -160,6 +150,27 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
         {
             list = TylkoDodatnie(TylkoParzyste(List_Sort(list)));
             return list;
+        }
+        public static int Fibonacci(int a)
+        {
+            if (a == 0)
+            {
+                return 0;
+            }
+            if (a == 1)
+            {
+                return 1;
+            }
+            if (a > 1)
+            {
+                List<int> result = new List<int>() {0, 1};
+                for (int i = 0; i < a - 1; i++)
+                {
+                    result.Add(result[i] + result[i + 1]);
+                }
+                return result[a - 1];
+            }
+            return -1;
         }
     }
 }

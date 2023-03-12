@@ -56,14 +56,14 @@ namespace Testy
 
             CollectionAssert.AreEqual(new List<int>() { 12, 32, 56 }, result);
         }
-        /*[TestMethod]
+        [TestMethod]
         public void Fibonacci_10()
         {
             int result = Program.Fibonacci(10);
 
             Assert.AreEqual(34, result);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void Liczby_pierwsze_z_przedzialu_100_200()
         {
             List<int> result = Program.LiczbyPierwsze(100, 200);
