@@ -6,7 +6,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
-
+            
             Console.ReadLine();
         }
         public static int modul(int a)
@@ -24,7 +24,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             {
                 return -1;
             }
-            return modul(a) * modul(a);
+            return a * a;
         }
 
         public static int PoleProstokata(int a, int b)
@@ -78,31 +78,16 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             {
                 return false;
             }
-            if (a > b && a > c && a < b + c)
+            if (a + b > c && a + c > b && b + c > a)
             {
                 return true;
             }
-            else if (b > a && b > c && b < a + c)
-            {
-                return true;
-            }
-            else if (c > a && c > b && c < a + b)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         public static bool Czy_pierwszy_wiekszy_od_drugiego(int a1, int h1, int a2, int h2)
         {
-            if (a1 == 0 || h1 == 0 || a2 == 0 || h2 == 0)
-            {
-                return false;
-            }
-            if (modul(a1) * modul(h1) > modul(a2) * modul(h2))
+            if (PoleTrojkata(a1, h1) > PoleTrojkata(a2, h2))
             {
                 return true;
             }
@@ -120,9 +105,21 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             return values;
         }
 
-        /*public static int List_Sort(List<int>)
+        public static List<int> List_Sort(List<int> list)
         {
-            return List<int>;
-        }*/
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                for (int j = 0; j < list.Count - 1; j++)
+                {
+                    if (list[j] > list[j + 1])
+                    {
+                        int[] values = Zamiana(list[j], list[j + 1]);
+                        list[j] = values[0];
+                        list[j + 1] = values[1];
+                    }
+                }
+            }
+            return list;
+        }
     }
 }
