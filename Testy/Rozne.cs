@@ -29,7 +29,7 @@ namespace Testy
 
             CollectionAssert.AreEqual(new List<int>() { -5, 1, 2, 4, 6, 6, 7, 8, 9, 9, 10, 12, 13 }, result);
         }
-        /*[TestMethod]
+        [TestMethod]
         public void Wybierz_z_listy_tylko_parzyste()
         {
             List<int> list = new List<int>() { 0, 3, 1, 7, 8, 148, 69 };
@@ -56,7 +56,7 @@ namespace Testy
 
             CollectionAssert.AreEqual(new List<int>() { 12, 32, 56 }, result);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void Fibonacci_10()
         {
             int result = Program.Fibonacci(10);

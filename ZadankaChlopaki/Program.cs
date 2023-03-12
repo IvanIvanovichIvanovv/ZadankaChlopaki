@@ -6,7 +6,17 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
-            
+            List<int> list = new List<int>() { 0, -18, 12, -46, 223, 12, 1, -53, 45 };
+
+            List<int> result = Program.TylkoDodatnie(list);
+
+            Console.WriteLine(result[0]);
+            Console.WriteLine(result[1]);
+            Console.WriteLine(result[2]);
+            Console.WriteLine(result[3]);
+            Console.WriteLine(result[4]);
+
+
             Console.ReadLine();
         }
         public static int modul(int a)
@@ -119,6 +129,36 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
                     }
                 }
             }
+            return list;
+        }
+
+        public static List<int> TylkoParzyste(List<int> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] % 2 != 0)
+                {
+                    list.Remove(list[i]);
+                    i -= 1;
+                }
+            }
+            return list;
+        }
+        public static List<int> TylkoDodatnie(List<int> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] <= 0)
+                {
+                    list.Remove(list[i]);
+                    i -= 1;
+                }
+            }
+            return list;
+        }
+        public static List<int> Dodatnie_Parzyste_Sort(List<int> list)
+        {
+            list = TylkoDodatnie(TylkoParzyste(List_Sort(list)));
             return list;
         }
     }
