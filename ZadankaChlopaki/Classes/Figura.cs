@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZadankaChlopaki.Classes
 {
-    public abstract class Figura
+    public abstract class Figura //klasa bazowa
     {
         protected int a;
         protected int h;
