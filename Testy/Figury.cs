@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ZadankaChlopaki;
+using ZadankaChlopaki.Classes;
 
 namespace Testy
 {
@@ -170,42 +171,48 @@ namespace Testy
         [TestMethod]
         public void Pole_Kwadratu_4x4_klasa()
         {
-            int result = 0;
+            Kwadrat kwadrat = new Kwadrat(4);
+            int result = kwadrat.Pole();
 
             Assert.AreEqual(16, result);
         }
         [TestMethod]
         public void Pole_Prostokata_6x9_klasa()
         {
-            int result = 0;
+            Prostokat prostokat = new Prostokat(6, 9);
+            int result = prostokat.Pole();
 
             Assert.AreEqual(54, result);
         }
         [TestMethod]
         public void Pole_Trojkata_2x8_klasa()
         {
-            int result = 0;
+            Trojkat trojkat = new Trojkat(2, 8);
+            int result = trojkat.Pole();
 
             Assert.AreEqual(8, result);
         }
         [TestMethod]
         public void Obwod_Kwadratu_4x4_klasa()
         {
-            int result = 0;
+            Kwadrat kwadrat = new Kwadrat(4);
+            int result = kwadrat.Obwod();
 
             Assert.AreEqual(16, result);
         }
         [TestMethod]
         public void Obwod_Prostokata_6x9_klasa()
         {
-            int result = 0;
+            Prostokat prostokat = new Prostokat(6, 9);
+            int result = prostokat.Obwod(6,9);
 
             Assert.AreEqual(30, result);
         }
         [TestMethod]
         public void Obwod_Trojkata_3x4x5_klasa()
         {
-            int result = 0;
+            Trojkat trojkat = new Trojkat(3, 4, 5);
+            int result = trojkat.Obwod();
 
             Assert.AreEqual(12, result);
         }

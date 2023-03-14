@@ -1,4 +1,5 @@
 ﻿using System;
+using ZadankaChlopaki.Classes;
 
 namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
 {
