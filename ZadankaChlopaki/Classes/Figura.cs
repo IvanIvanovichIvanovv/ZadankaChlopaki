@@ -16,7 +16,12 @@ namespace ZadankaChlopaki.Classes
         public Figura(int a, int b )
         {
             this.a = a;
-            this.h = b;
+            h = b;
+        }
+        public Figura(int a) 
+        {
+            this.a = a;
+            h = a;
         }
     }
 }

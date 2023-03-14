@@ -8,9 +8,9 @@ namespace ZadankaChlopaki.Classes
 {
     public class Kwadrat:Figura
     {
-        public Kwadrat(int a, int b) : base(a, b)
+        public Kwadrat(int a):base(a)
         {
-           
+            
         }
 
         public override int Pole() 
