@@ -243,7 +243,7 @@ namespace Testy
         public void Obwod_Prostokata_m6x9_klasa()
         {
             Prostokat prostokat = new Prostokat(-6, 9);
-            int result = prostokat.Obwod(6, 9);
+            int result = prostokat.Obwod();
 
             Assert.AreEqual(30, result);
         }
