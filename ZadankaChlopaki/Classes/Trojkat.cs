@@ -16,9 +16,9 @@ namespace ZadankaChlopaki.Classes
         }
         public Trojkat(int a,int b ,int c)
         {
-            this.a = a;
-            this.b = b;
-            this.c = c;
+            this.a = Math.Abs(a);
+            this.b = Math.Abs(b);
+            this.c = Math.Abs(c);
         }
 
         public override int Pole()
