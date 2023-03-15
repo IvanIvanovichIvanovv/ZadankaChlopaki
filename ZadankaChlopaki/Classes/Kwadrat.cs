@@ -21,5 +21,9 @@ namespace ZadankaChlopaki.Classes
         {
             return this.a * 2 + this.h * 2;
         }
+        public int GetA() 
+        {
+            return this.a;
+        }
     }
 }

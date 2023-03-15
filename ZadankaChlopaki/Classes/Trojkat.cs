@@ -20,6 +20,13 @@ namespace ZadankaChlopaki.Classes
             this.b = Math.Abs(b);
             this.c = Math.Abs(c);
         }
+        public Trojkat(int a, int b,int c,int h) 
+        {
+            this.a = Math.Abs(a);
+            this.b = Math.Abs(b);
+            this.c = Math.Abs(c);
+            this.h = Math.Abs(h);
+        }
 
         public override int Pole()
         {
@@ -28,6 +35,10 @@ namespace ZadankaChlopaki.Classes
         public override int Obwod()
         {
             return a + b + c;
+        }
+        public int[] GetDimensions() 
+        {
+            return new int[4] {this.a,this.b,this.c,this.h};
         }
     }
 }

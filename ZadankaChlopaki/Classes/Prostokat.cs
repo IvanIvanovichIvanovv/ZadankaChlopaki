@@ -20,5 +20,9 @@ namespace ZadankaChlopaki.Classes
         {
             return a * h;
         }
+        public int[] GetDimensions() 
+        {
+            return new int[2] { this.a, this.h };
+        }
     }
 }
