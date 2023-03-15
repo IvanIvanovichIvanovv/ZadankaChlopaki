@@ -45,5 +45,21 @@ namespace Testy
 
             Assert.AreEqual(30, result);
         }
+        [TestMethod]
+        public void Utworz_Prostokat_m4_6()
+        {
+            Prostokat prostokat = new Prostokat(-4, 6);
+            int[] result = prostokat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[2] {4,6},result);
+        }
+        [TestMethod]
+        public void Utworz_Prostokat_4_6()
+        {
+            Prostokat prostokat = new Prostokat(4, 6);
+            int[] result = prostokat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[2] { 4, 6 }, result);
+        }
     }
 }

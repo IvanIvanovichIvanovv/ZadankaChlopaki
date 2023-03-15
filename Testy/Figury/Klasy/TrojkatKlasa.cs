@@ -45,5 +45,21 @@ namespace Testy
 
             Assert.AreEqual(12, result);
         }
+        [TestMethod]
+        public void Utworz_trojkat_3_4_5_h4() 
+        {
+            Trojkat trojkat = new Trojkat(3, 4, 5, 4);
+            int[] result = trojkat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[4] {3,4,5,4},result);
+        }
+        [TestMethod]
+        public void Utworz_trojkat_3_m4_5_mh4()
+        {
+            Trojkat trojkat = new Trojkat(3,-4, 5,-4);
+            int[] result = trojkat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[4] { 3, 4, 5, 4 }, result);
+        }
     }
 }
