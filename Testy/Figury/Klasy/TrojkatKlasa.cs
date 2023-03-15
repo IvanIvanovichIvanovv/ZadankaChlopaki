@@ -61,5 +61,49 @@ namespace Testy
 
             CollectionAssert.AreEqual(new int[4] { 3, 4, 5, 4 }, result);
         }
+        [TestMethod]
+        public void Zmien_a_na_4() 
+        {
+            Trojkat trojkat=new Trojkat(3,4,5,4);
+
+            trojkat.ChangeA(4);
+
+            int[] result = trojkat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[4] { 4,4,5,4,},result);
+        }
+        [TestMethod]
+        public void Zmien_a_na_m4()
+        {
+            Trojkat trojkat = new Trojkat(3, 4, 5, 4);
+
+            trojkat.ChangeA(-4);
+
+            int[] result = trojkat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[4] { 4, 4, 5, 4, }, result);
+        }
+        [TestMethod]
+        public void Zmien_a_na_25()// trojkat nie powinien sie zmienic bo nie moglby istniec
+        {
+            Trojkat trojkat = new Trojkat(3, 4, 5, 4);
+
+            trojkat.ChangeA(25);
+
+            int[] result = trojkat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[4] { 3, 4, 5, 4, }, result);
+        }
+        [TestMethod]
+        public void Zmien_a_na_m25()// trojkat nie powinien sie zmienic bo nie moglby istniec
+        {
+            Trojkat trojkat = new Trojkat(3, 4, 5, 4);
+
+            trojkat.ChangeA(-25);
+
+            int[] result = trojkat.GetDimensions();
+
+            CollectionAssert.AreEqual(new int[4] { 3, 4, 5, 4, }, result);
+        }
     }
 }
