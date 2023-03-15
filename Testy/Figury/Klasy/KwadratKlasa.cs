@@ -45,5 +45,21 @@ namespace Testy
 
             Assert.AreEqual(16, result);
         }
+        [TestMethod]
+        public void Utworz_Kwadrat_m4() 
+        {
+            Kwadrat kwadrat = new Kwadrat(-4);
+            int result = kwadrat.GetA();
+
+            Assert.AreEqual(4, result);
+        }
+        [TestMethod]
+        public void Utworz_Kwadrat_4()
+        {
+            Kwadrat kwadrat = new Kwadrat(4);
+            int result = kwadrat.GetA();
+
+            Assert.AreEqual(4, result);
+        }
     }
 }
