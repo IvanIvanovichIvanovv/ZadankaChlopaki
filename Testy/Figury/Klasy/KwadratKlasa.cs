@@ -61,5 +61,23 @@ namespace Testy
 
             Assert.AreEqual(4, result);
         }
+        [TestMethod]
+        public void Zmien_a_kwadratu_na_6()
+        {
+            Kwadrat kwadrat = new Kwadrat(4);
+
+            kwadrat.SetA(6);
+
+            Assert.AreEqual(kwadrat.GetA(), 6);
+        }
+        [TestMethod]
+        public void Zmien_a_kwadratu_na_m6()
+        {
+            Kwadrat kwadrat = new Kwadrat(4);
+
+            kwadrat.SetA(-6);
+
+            Assert.AreEqual(kwadrat.GetA(), 6);
+        }
     }
 }
