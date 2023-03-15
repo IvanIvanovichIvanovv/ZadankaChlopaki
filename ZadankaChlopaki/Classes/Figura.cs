@@ -23,5 +23,9 @@ namespace ZadankaChlopaki.Classes
             this.a = a;
             h = a;
         }
+        public Figura()
+        {
+            
+        }
     }
 }
