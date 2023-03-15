@@ -25,5 +25,12 @@ namespace ZadankaChlopaki.Classes
         {
             return this.a;
         }
+        public void SetA(int x) 
+        {
+            if (x != 0) 
+            {
+                this.a = Math.Abs(x);
+            }
+        }
     }
 }

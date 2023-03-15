@@ -24,5 +24,24 @@ namespace ZadankaChlopaki.Classes
         {
             return new int[2] { this.a, this.h };
         }
+        public void ChangeA(int x) 
+        {
+            if (x != 0) 
+            {
+                this.a = Math.Abs(x);
+            }
+        }
+        public void ChangeB(int x)
+        {
+            if (x != 0)
+            {
+                this.h = Math.Abs(x);
+            }
+        }
+        public void ChangeDimensions(int x,int y) 
+        {
+            this.ChangeA(x);
+            this.ChangeB(y);
+        }
     }
 }

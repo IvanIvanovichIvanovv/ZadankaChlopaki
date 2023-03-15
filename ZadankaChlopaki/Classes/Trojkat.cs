@@ -40,5 +40,20 @@ namespace ZadankaChlopaki.Classes
         {
             return new int[4] {this.a,this.b,this.c,this.h};
         }
+        public void ChangeA(int x) 
+        {
+            if (this.Can_Create_Triangle(x, this.b, this.c)) 
+            {
+                this.a = Math.Abs(x);
+            }
+        }
+        public bool Can_Create_Triangle(int a,int b ,int c) 
+        {
+            if(Math.Abs(a)+ Math.Abs(b) >Math.Abs(c) && Math.Abs(a) + Math.Abs(c) > Math.Abs(b) && Math.Abs(b) + Math.Abs(c) > Math.Abs(a)) 
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
