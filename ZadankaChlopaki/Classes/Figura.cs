@@ -12,6 +12,8 @@ namespace ZadankaChlopaki.Classes
         protected int a;
         protected int h;
 
+        public int A { get { return a; } set { if (value != 0) { a = Math.Abs(value); } } }
+
         public abstract int Pole();
         public abstract int Obwod();
         public Figura(int a, int b )

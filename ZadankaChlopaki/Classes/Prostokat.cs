@@ -8,6 +8,7 @@ namespace ZadankaChlopaki.Classes
 {
     public class Prostokat:Figura
     {
+        public int B { get { return this.h; } set { if(value!=0) this.h = Math.Abs(value); } } 
         public Prostokat(int a,int b):base(a,b)
         {
             
