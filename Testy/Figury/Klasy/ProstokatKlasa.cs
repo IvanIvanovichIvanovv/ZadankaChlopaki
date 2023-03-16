@@ -82,44 +82,36 @@ namespace Testy
         {
             Prostokat prostokat=new Prostokat(2,3);
 
-            prostokat.ChangeA(6);
+            prostokat.A=6;
 
-            int[] result = prostokat.GetDimensions();
-
-            Assert.AreEqual(6, result[0]);
+            Assert.AreEqual(6, prostokat.A);
         }
         [TestMethod]
         public void Zmien_dlugosc_pierwszego_boku_na_m6()
         {
             Prostokat prostokat = new Prostokat(2, 3);
 
-            prostokat.ChangeA(-6);
+            prostokat.A=-6;
 
-            int[] result = prostokat.GetDimensions();
-
-            Assert.AreEqual(6, result[0]);
+            Assert.AreEqual(6, prostokat.A);
         }
         [TestMethod]
         public void Zmien_dlugosc_drugiego_boku_na_m6()
         {
             Prostokat prostokat = new Prostokat(2, 3);
 
-            prostokat.ChangeB(-6);
+            prostokat.B=-6;
 
-            int[] result = prostokat.GetDimensions();
-
-            Assert.AreEqual(6, result[1]);
+            Assert.AreEqual(6, prostokat.B);
         }
         [TestMethod]
         public void Zmien_dlugosc_drugiego_boku_na_6()
         {
             Prostokat prostokat = new Prostokat(2, 3);
 
-            prostokat.ChangeB(6);
+            prostokat.B=6;
 
-            int[] result = prostokat.GetDimensions();
-
-            Assert.AreEqual(6, result[1]);
+            Assert.AreEqual(6, prostokat.B);
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
