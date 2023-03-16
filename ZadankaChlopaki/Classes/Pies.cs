@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZadankaChlopaki.Classes
 {
-    public class Pies:Zwierze
+    public class Pies : Zwierze
     {
         public override void CzymJestZwierzak()
         {
@@ -17,9 +17,9 @@ namespace ZadankaChlopaki.Classes
             base.WydajDzwiek();
             Console.WriteLine("Hau");
         }
-        public Pies(int wiek,string imie):base(wiek,imie)
+        public Pies(int wiek, string imie) : base(wiek, imie)
         {
-            
+
         }
         public Pies() : base() { }
 
