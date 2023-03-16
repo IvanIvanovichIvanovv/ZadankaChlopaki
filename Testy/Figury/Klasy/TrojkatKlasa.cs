@@ -66,7 +66,7 @@ namespace Testy
         {
             Trojkat trojkat=new Trojkat(3,4,5,4);
 
-            trojkat.ChangeA(4);
+            trojkat.A = 4; ;
 
             int[] result = trojkat.GetDimensions();
 
@@ -77,7 +77,7 @@ namespace Testy
         {
             Trojkat trojkat = new Trojkat(3, 4, 5, 4);
 
-            trojkat.ChangeA(-4);
+            trojkat.A = -4 ;
 
             int[] result = trojkat.GetDimensions();
 
@@ -88,7 +88,7 @@ namespace Testy
         {
             Trojkat trojkat = new Trojkat(3, 4, 5, 4);
 
-            trojkat.ChangeA(25);
+            trojkat.A=25;
 
             int[] result = trojkat.GetDimensions();
 
@@ -99,7 +99,7 @@ namespace Testy
         {
             Trojkat trojkat = new Trojkat(3, 4, 5, 4);
 
-            trojkat.ChangeA(-25);
+            trojkat.A=-25;
 
             int[] result = trojkat.GetDimensions();
 
