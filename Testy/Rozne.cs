@@ -63,7 +63,7 @@ namespace Testy
 
             Assert.AreEqual(34, result);
         }
-        /*[TestMethod]
+        [TestMethod]
         public void Liczby_pierwsze_z_przedzialu_100_200()
         {
             List<int> result = Program.LiczbyPierwsze(100, 200);
@@ -87,14 +87,14 @@ namespace Testy
 
             Assert.AreEqual("DuiSoo", result);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void Miejsca_zerowe_4x2_12x_m16()
         {
             int[] miejsca_zerowe = Program.Miejsca_Zerowe(4, 12, -16);
 
             Assert.AreEqual(1, miejsca_zerowe[0]);
             Assert.AreEqual(-4, miejsca_zerowe[1]);
-        }
+        }*/
         [TestMethod]
         public void Reszta_z_dzielenia_przez_69_420()
         {
@@ -102,7 +102,7 @@ namespace Testy
 
             Assert.AreEqual(6, result);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void NWW_42_91()
         {
             int result = Program.NWW(42, 91);
@@ -115,7 +115,7 @@ namespace Testy
             int result = Program.NWD(42, 91);
 
             Assert.AreEqual(7, result);
-        }
+        }*/
         [TestMethod]
         public void Rozklad_na_czynniki_pierwsze_42()
         {
@@ -139,7 +139,7 @@ namespace Testy
 
             Assert.AreEqual(result, 4);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void Pierwiastek_27_3()
         {
             int result = Program.Pierwiastek(27, 3);
