@@ -6,11 +6,10 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
-            List<int> pierwsze = Czynniki_pierwsze(42);
-            for (int i = 0; i < pierwsze.Count; i++)
-            {
-                Console.WriteLine(pierwsze[i]);
-            }
+            Kot kitku = new(3, "Pchlarz");
+            Pies kundel = new();
+            Console.WriteLine(kitku.ToString()+" "+kundel.ToString()); 
+
             Console.ReadLine();
         }
 
