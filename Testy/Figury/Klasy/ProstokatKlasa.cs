@@ -121,5 +121,23 @@ namespace Testy
 
             Assert.AreEqual(6, result[1]);
         }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Utworz_prostokat_4_0() 
+        {
+            Prostokat prostokat = new(4, 0);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Utworz_prostokat_0_4()
+        {
+            Prostokat prostokat = new(0, 4);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Utworz_prostokat_0_0()
+        {
+            Prostokat prostokat = new(0, 0);
+        }
     }
 }
