@@ -79,5 +79,11 @@ namespace Testy
 
             Assert.AreEqual(kwadrat.GetA(), 6);
         }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Utworz_kwadrat_0() 
+        {
+            Kwadrat kwadrat = new(0);
+        }
     }
 }
