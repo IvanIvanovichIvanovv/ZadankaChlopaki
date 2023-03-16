@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using ZadankaChlopaki.Classes;
 
 namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
 {
@@ -69,7 +69,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             {
                 return -1;
             }
-            return modul(a) * modul(b);
+            return modul(a) * modul(b); //mozesz wziac modul z wyniku, funkcja modul() bedzie wywolywana 1 raz mniej
         }
 
         public static int PoleTrojkata(int a, int h)
@@ -78,7 +78,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             {
                 return -1;
             }
-            return modul(a) * modul(h) / 2;
+            return modul(a) * modul(h) / 2; //mozesz wziac modul z wyniku, funkcja modul() bedzie wywolywana 1 raz mniej
         }
 
         public static int ObwodKwadratu(int a)
@@ -87,7 +87,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             {
                 return -1;
             }
-            return 4 * modul(a);
+            return 4 * modul(a); 
         }
 
         public static int ObwodProstokata(int a, int b)
@@ -155,7 +155,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
                     }
                 }
             }
-            return list;
+            return list; 
         }
 
         public static List<int> TylkoParzyste(List<int> list)
