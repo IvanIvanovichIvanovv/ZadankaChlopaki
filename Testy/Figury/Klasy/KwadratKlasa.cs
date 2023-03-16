@@ -49,7 +49,7 @@ namespace Testy
         public void Utworz_Kwadrat_m4() 
         {
             Kwadrat kwadrat = new Kwadrat(-4);
-            int result = kwadrat.GetA();
+            int result = kwadrat.A;
 
             Assert.AreEqual(4, result);
         }
@@ -57,7 +57,7 @@ namespace Testy
         public void Utworz_Kwadrat_4()
         {
             Kwadrat kwadrat = new Kwadrat(4);
-            int result = kwadrat.GetA();
+            int result = kwadrat.A;
 
             Assert.AreEqual(4, result);
         }
@@ -66,18 +66,18 @@ namespace Testy
         {
             Kwadrat kwadrat = new Kwadrat(4);
 
-            kwadrat.SetA(6);
+            kwadrat.A=6;
 
-            Assert.AreEqual(kwadrat.GetA(), 6);
+            Assert.AreEqual(kwadrat.A, 6);
         }
         [TestMethod]
         public void Zmien_a_kwadratu_na_m6()
         {
             Kwadrat kwadrat = new Kwadrat(4);
 
-            kwadrat.SetA(-6);
+            kwadrat.A=-6;
 
-            Assert.AreEqual(kwadrat.GetA(), 6);
+            Assert.AreEqual(kwadrat.A, 6);
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
