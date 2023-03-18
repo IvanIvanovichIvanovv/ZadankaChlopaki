@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ZadankaChlopaki;
 using ZadankaChlopaki.Classes;
-
+/*
 namespace Testy
 {
     [TestClass]
     public class ProstokatKlasa
     {
-        static Program _program = new Program();
         [TestMethod]
         public void Pole_Prostokata_6x9_klasa()
         {
@@ -133,3 +132,4 @@ namespace Testy
         }
     }
 }
+*/

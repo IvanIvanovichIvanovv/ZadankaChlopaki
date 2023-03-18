@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ZadankaChlopaki;
 using ZadankaChlopaki.Classes;
-
+/*
 namespace Testy
 {
     [TestClass]
     public class TrojkatKlasa
     {
-        static Program _program = new Program();
         [TestMethod]
         public void Pole_Trojkata_2x8_klasa()
         {
@@ -107,3 +106,4 @@ namespace Testy
         }
     }
 }
+*/

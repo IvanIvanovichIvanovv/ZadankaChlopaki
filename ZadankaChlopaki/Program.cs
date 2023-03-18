@@ -11,7 +11,11 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
         }
         public static int PoleKwadratu(int a)
         {
-            return a * a;
+            if (a != 0) 
+            {
+                return a * a;
+            }
+            return -1;
         }
 
         public static int PoleProstokata(int a, int b)
@@ -26,7 +30,15 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
 
         public static int ObwodKwadratu(int a)
         {
-            return 4 * a;
+            if (a > 0)
+            {
+                return 4 * a;
+            }
+            if (a == 0)
+            {
+                return -1;
+            }
+            return 4 * -a;
         }
 
         public static int ObwodProstokata(int a, int b)

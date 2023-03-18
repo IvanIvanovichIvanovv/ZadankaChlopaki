@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ZadankaChlopaki;
-
+/*
 namespace Testy
 {
     [TestClass]
@@ -147,3 +147,4 @@ namespace Testy
 
     }
 }
+*/

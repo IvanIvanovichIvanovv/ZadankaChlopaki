@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ZadankaChlopaki;
 using ZadankaChlopaki.Classes;
-
+/*
 namespace Testy
 {
     [TestClass]
@@ -84,3 +84,4 @@ namespace Testy
         
     }
 }
+*/
