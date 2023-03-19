@@ -57,7 +57,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             return -1;
         }
         public static int PoleTrojkata(int a, int h)
-        {//
+        {
             if (a == 0 || h == 0)
             {
                 return -1;
@@ -162,11 +162,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
         }
         public static bool Czy_pierwszy_wiekszy_od_drugiego(int a1, int h1, int a2, int h2)
         {
-            if (PoleTrojkata(a1, h1) > PoleTrojkata(a2, h2))
-            {
-                return true;
-            }
-            return false;
+            return PoleTrojkata(a1, h1) > PoleTrojkata(a2, h2);
         }
         public static string Tylko_Parzyste_Litery(string wyraz)
         {
