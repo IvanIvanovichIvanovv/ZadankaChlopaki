@@ -59,7 +59,7 @@ namespace Testy
         {
             int result = Program.Fibonacci(10);
 
-            Assert.AreEqual(34, result);
+            Assert.AreEqual(55, result);
         }
         [TestMethod]
         public void Liczby_pierwsze_z_przedzialu_100_200()
