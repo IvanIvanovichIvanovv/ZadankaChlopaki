@@ -121,10 +121,17 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
         }
         public static List<int> Dodatnie_Parzyste_Sort(List<int> list)
         {
+            /*
             TylkoParzyste(list);
             TylkoDodatnie(list);
-            List_Sort(list);
-            return list;
+            List_Sort(list);*/
+            var results = (from a in list
+                          where a%2==0
+                          where a>0
+                          orderby a
+                          select a).ToList();
+                          
+            return results;
         }
         public static int Modulo(int a, int b)
         {
