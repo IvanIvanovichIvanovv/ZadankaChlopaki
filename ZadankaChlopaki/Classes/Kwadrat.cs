@@ -8,18 +8,18 @@ namespace ZadankaChlopaki.Classes
 {
     public class Kwadrat:Figura
     {
-        public Kwadrat(int a):base(a)
+        public Kwadrat(int a) : base(a)
         {
-            
+
         }
 
         public override int Pole() 
         {
-            return this.a * this.h;
+            return this.a * this.a;
         }
         public override int Obwod()
         {
-            return this.a * 2 + this.h * 2;
+            return this.a * 4;
         }
     }
 }

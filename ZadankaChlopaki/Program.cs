@@ -7,44 +7,10 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
     {
         public static void Main(string[] args)
         {
-            int a = 16;
-            int b = 2;
-
-            List<int> czynniki = List_Sort(Czynniki_pierwsze(a));
-            List<int> czynniki_result = new List<int>();
-
-            if (b == 2)
-            {
-                for (int i = 0; i < czynniki.Count / 2; i++)
-                {
-                    if (czynniki[i] == czynniki[i + 1])
-                    {
-                        czynniki_result.Add(czynniki[i]);
-                    }
-                    i++;
-                }
-            }
-
-
-            int result = 1;
-
-            for (int i = 0; i < czynniki_result.Count; i++)
-            {
-                result *= czynniki_result[i];
-            }
-
-            Console.WriteLine(czynniki[0]);
-            Console.WriteLine(czynniki[1]);
-            Console.WriteLine(czynniki[2]);
-            Console.WriteLine(czynniki[3]);
-            Console.WriteLine("dupa");
-            Console.WriteLine(czynniki_result[0]);
-            Console.WriteLine(czynniki_result[1]);
-
-            Console.WriteLine(result);
-
-            Console.ReadLine();
+            
+                Console.ReadLine();
         }
+
         public static int modul(int a)
         {
             if (a < 0)
@@ -69,7 +35,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             {
                 return -1;
             }
-            return modul(a) * modul(b); //mozesz wziac modul z wyniku, funkcja modul() bedzie wywolywana 1 raz mniej
+            return modul(a * b);
         }
 
         public static int PoleTrojkata(int a, int h)
@@ -78,7 +44,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             {
                 return -1;
             }
-            return modul(a) * modul(h) / 2; //mozesz wziac modul z wyniku, funkcja modul() bedzie wywolywana 1 raz mniej
+            return modul(a * h / 2);
         }
 
         public static int ObwodKwadratu(int a)
@@ -170,6 +136,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             }
             return list;
         }
+
         public static List<int> TylkoDodatnie(List<int> list)
         {
             for (int i = 0; i < list.Count; i++)
@@ -182,11 +149,13 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             }
             return list;
         }
+
         public static List<int> Dodatnie_Parzyste_Sort(List<int> list)
         {
             list = TylkoDodatnie(TylkoParzyste(List_Sort(list)));
             return list;
         }
+
         public static int Fibonacci(int a)
         {
             if (a == 0)
@@ -235,6 +204,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             }
             return result;
         }
+
         public static string Odwroc_Napis(string a)
         {
             char[] letters = a.ToCharArray();
@@ -273,61 +243,6 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             return result;
         }
 
-        public static int Pierwiastek(int a, int b)
-        {
-            List<int> czynniki = List_Sort(Czynniki_pierwsze(a));
-            List<int> czynniki_result = new List<int>();
-
-            if (b == 2)
-            {
-                for (int i = 0; i <= czynniki.Count / 2; i++)
-                {
-                    if (czynniki[i] == czynniki[i + 1])
-                    {
-                        czynniki_result.Add(czynniki[i]);
-                    }
-                    i++;
-                }
-            }
-            
-
-            int result = 1;
-
-            for (int i = 0; i < czynniki_result.Count; i++)
-            {
-                result *= czynniki_result[i];
-            }
-
-            return result;
-        }
-
-        /*public static int[] Miejsca_Zerowe(int a, int b, int c)
-        {
-            if (a == 0)
-            {
-                int x = -c / b;
-                int[] miejsca_zerowe = new int[1] { x };
-                return miejsca_zerowe;
-            }
-            int delta = b * b - 4 * a * c;
-            if (delta > 0)
-            {
-                int x1 = (-b + Pierwiastek(delta)) / 2 * a;
-                int x2 = (-b - Pierwiastek(delta)) / 2 * a;
-                int[] miejsca_zerowe = new int[2] { x1, x2 };
-                return miejsca_zerowe;
-            }
-            else if (delta == 0)
-            {
-                int x = -b / 2 * a;
-                int[] miejsca_zerowe = new int[1] { x };
-                return miejsca_zerowe;
-            }
-            else
-            {
-                return;
-            }
-        }*/
         public static int Modulo(int a, int b)
         {
             int whole = b / a;
@@ -370,6 +285,7 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             }
             return result;
         }
+
         public static int Potega(int a, int b)
         {
             int result = a;
@@ -388,6 +304,90 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             }
 
             return result;
+        }
+
+        public static int Pierwiastek(int a, int b)
+        {
+            int result = 0;
+
+            if (a == 1)
+            {
+                return 1;
+            }
+           
+            if (b == 2 || (b == 3 && a > 0))
+            {
+                int number = 1;
+                int pierwiastek = 1;
+                while (number != a)
+                {
+                    number = Potega(pierwiastek, b);
+                    pierwiastek++;
+                }
+                result = pierwiastek - 1;
+                return result;
+            }
+
+            if (a == -1)
+            {
+                return -1;
+            }
+
+            if (b == 3 && a < 0)
+            {
+                int number = 1;
+                int pierwiastek = -1;
+                while (number != a)
+                {
+                    number = Potega(pierwiastek, b);
+                    pierwiastek--;
+                }
+                result = pierwiastek + 1;
+                return result;
+            }
+
+            return result;
+        }
+
+        public static int[] Miejsca_Zerowe(int a, int b, int c)
+        {
+            if (a == 0)
+            {
+                int x = -c / b;
+                int[] miejsca_zerowe = new int[1] { x };
+                return miejsca_zerowe;
+            }
+            int delta = b * b - 4 * a * c;
+            if (delta > 0)
+            {
+                int x1 = (-b + Pierwiastek(delta, 2)) / (2 * a);
+                int x2 = (-b - Pierwiastek(delta, 2)) / (2 * a);
+                int[] miejsca_zerowe = new int[2] { x1, x2 };
+                return miejsca_zerowe;
+            }
+            else if (delta == 0)
+            {
+                int x = -b / 2 * a;
+                int[] miejsca_zerowe = new int[1] { x };
+                return miejsca_zerowe;
+            }
+            else
+            {
+                int[] miejsca_zerowe = new int[0];
+                return miejsca_zerowe;
+            }
+        }
+
+        public static int NWD(int a, int b)
+        {
+            int reszta = 0;
+            while (a % b != 0)
+            {
+                reszta = a % b;
+                a = b;
+                b = reszta;
+            }
+            return reszta;
         }
     }
 }

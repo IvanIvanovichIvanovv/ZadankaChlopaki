@@ -66,7 +66,7 @@ namespace Testy
         {
             Trojkat trojkat=new Trojkat(3,4,5,4);
 
-            trojkat.A = 4; ;
+            trojkat.A = 4;
 
             int[] result = trojkat.GetDimensions();
 
