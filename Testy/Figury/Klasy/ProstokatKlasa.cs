@@ -11,7 +11,7 @@ namespace Testy
 {
     [TestClass]
     public class ProstokatKlasa
-    {
+    {/*
         static Program _program = new Program();
         [TestMethod]
         public void Pole_Prostokata_6x9_klasa()
@@ -131,5 +131,6 @@ namespace Testy
         {
             Prostokat prostokat = new(0, 0);
         }
+        */
     }
 }

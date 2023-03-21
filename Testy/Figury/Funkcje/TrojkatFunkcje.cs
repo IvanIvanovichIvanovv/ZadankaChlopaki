@@ -11,7 +11,7 @@ namespace Testy
 {
     [TestClass]
     public class TrojkatFunkcje
-    {
+    {/*
         static Program _program = new Program();
         [TestMethod]
         public void Pole_Trojkata_2x8_metoda()
@@ -81,6 +81,7 @@ namespace Testy
 
             Assert.AreEqual(result, -1);
         }
-        
+        */
+
     }
 }

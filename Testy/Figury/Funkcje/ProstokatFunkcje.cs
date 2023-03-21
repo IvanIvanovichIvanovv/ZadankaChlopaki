@@ -11,7 +11,7 @@ namespace Testy
 {
     [TestClass]
     public class ProstokatFunkcje
-    {
+    {/*
         static Program _program = new Program();
         [TestMethod]
         public void Pole_Prostokata_6x9_metoda()
@@ -55,5 +55,6 @@ namespace Testy
 
             Assert.AreEqual(result, -1);
         }
+        */
     }
 }

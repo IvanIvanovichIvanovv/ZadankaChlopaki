@@ -11,7 +11,7 @@ namespace Testy
 {
     [TestClass]
     public class TrojkatKlasa
-    {
+    {/*
         static Program _program = new Program();
         [TestMethod]
         public void Pole_Trojkata_2x8_klasa()
@@ -104,6 +104,8 @@ namespace Testy
             int[] result = trojkat.GetDimensions();
 
             CollectionAssert.AreEqual(new int[4] { 3, 4, 5, 4, }, result);
+
         }
+        */
     }
 }

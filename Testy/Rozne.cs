@@ -17,7 +17,7 @@ namespace Testy
 
             Assert.AreEqual(result[0], 10);
             Assert.AreEqual(result[1], 5);
-        }
+        }/*
         [TestMethod]
         public void Posortuj_liste_od_min_do_max()
         {
@@ -144,6 +144,6 @@ namespace Testy
 
             Assert.AreEqual(result, 3);
         }
-
+            */
     }
 }

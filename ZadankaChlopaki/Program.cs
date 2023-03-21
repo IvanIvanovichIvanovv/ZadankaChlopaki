@@ -10,6 +10,9 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             Trojkat trojkat = new Trojkat(5, 4);
             Console.WriteLine(trojkat.Pole());
             Console.ReadLine();
+            ///
         }
+        
+        public static int[] Zamiana(int a, int b) { return new int[] { a, b }; }
     }
 }

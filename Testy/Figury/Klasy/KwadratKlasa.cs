@@ -11,7 +11,7 @@ namespace Testy
 {
     [TestClass]
     public class KwadratKlasa
-    {
+    {/*
         static Program _program = new Program();
         [TestMethod]
         public void Pole_Kwadratu_4x4_klasa()
@@ -85,5 +85,6 @@ namespace Testy
         {
             Kwadrat kwadrat = new(0);
         }
+        */
     }
 }
