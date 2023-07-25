@@ -13,6 +13,29 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
             ///
         }
         
-        public static int[] Zamiana(int a, int b) { return new int[] { a, b }; }
+        public static int[] Zamiana(int a, int b) 
+        {
+            a = a - b;
+            b = a + b;
+            a = b - a;
+
+            return new int[] { a, b };
+
+        }
+        public static List<int> List_Sort(List<int> list)
+              
+           
+            {
+            List = list;
+            list.Sort();
+            
+
+                foreach (int i in list) 
+            {
+                Console.WriteLine(i);
+            }
+              
+                return new List<int> { };
+        }
     }
 }
