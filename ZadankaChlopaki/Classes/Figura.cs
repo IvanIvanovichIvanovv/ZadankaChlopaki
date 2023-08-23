@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ZadankaChlopaki.Classes
+﻿namespace ZadankaChlopaki.Classes
 {
     public abstract class Figura //klasa bazowa
     {
@@ -13,12 +7,12 @@ namespace ZadankaChlopaki.Classes
 
         public abstract int Pole();
         public abstract int Obwod();
-        public Figura(int a, int b )
+        public Figura(int a, int b)
         {
             this.a = a;
             h = b;
         }
-        public Figura(int a) 
+        public Figura(int a)
         {
             this.a = a;
             h = a;

@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ZadankaChlopaki.Classes
+﻿namespace ZadankaChlopaki.Classes
 {
-    public class Kwadrat:Figura
+    public class Kwadrat : Figura
     {
-        public Kwadrat(int a):base(a)
+        public Kwadrat(int a) : base(a)
         {
-            
+
         }
 
-        public override int Pole() 
+        public override int Pole()
         {
             return this.a * this.h;
         }

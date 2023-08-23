@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ZadankaChlopaki.Classes
+﻿namespace ZadankaChlopaki.Classes
 {
-    public class Trojkat:Figura
+    public class Trojkat : Figura
     {
         public Trojkat(int a, int b) : base(a, b)
         {
@@ -14,7 +8,7 @@ namespace ZadankaChlopaki.Classes
 
         public override int Pole()
         {
-            return (this.a*this.h)/2;
+            return (this.a * this.h) / 2;
         }
         public override int Obwod()
         {

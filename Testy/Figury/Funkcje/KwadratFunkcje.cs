@@ -11,7 +11,7 @@ namespace Testy
 {
     [TestClass]
     public class KwadratFunkcje
-    {/*
+    {
         static Program _program = new Program();
         [TestMethod]
         public void Pole_Kwadratu_4x4_metoda()
@@ -20,6 +20,7 @@ namespace Testy
 
             Assert.AreEqual(16, result);
         }
+        
         [TestMethod]
         public void Obwod_Kwadratu_4x4_Metoda()
         {
@@ -27,6 +28,7 @@ namespace Testy
 
             Assert.AreEqual(16, result);
         }
+        
         [TestMethod]
         public void Pole_Kwadratu_m2_metoda()
         {
@@ -34,6 +36,7 @@ namespace Testy
 
             Assert.AreEqual(result, 4);
         }
+        
         [TestMethod]
         public void Pole_Kwadratu_0_metoda()
         {
@@ -55,6 +58,6 @@ namespace Testy
 
             Assert.AreEqual(result, -1);
         }
-        */
+        
     }
 }

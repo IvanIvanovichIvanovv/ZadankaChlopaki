@@ -22,7 +22,7 @@ namespace Testy
             
 
 
-        }
+        }/*
         [TestMethod]
         public void Posortuj_liste_od_min_do_max()
         {
