@@ -113,23 +113,42 @@ namespace ZadankaChlopaki // Note: actual namespace depends on the project name.
 
         public static int PoleTrojkata(int a, int b) 
         {
-            return (a * b) / 2;
+            if (a == 0 || b == 0) 
+            {
+                return -1;
+            }
+            
+            return (Math.Abs(a) * Math.Abs(b)) / 2; // Math.Abs - wart absol
         }
         public static int ObwodTrojkata(int a, int b, int c)
         {
-            return a + b + c;
+            if ((a == 0) || (b == 0) || (c == 0))
+            {
+                return -1;
+            }
+
+            return Math.Abs(a) + Math.Abs(b) + Math.Abs(c);
         }
         public static bool TrojkatIstnieje(int a, int b, int c)
         {
-            
+
             if (a + b > c && a + c > b && c + b > a)
             {
                 return true;
             }
             return false;
-
-
         }
+        public static bool Czy_pierwszy_wiekszy_od_drugiego(int a, int b, int c, int d) 
+        {
+            if (PoleTrojkata(a, b) > PoleTrojkata (c,d)) 
+            {
+                return true;
+            }
+            return false;   
+        }
+            
+
+                
 
 
     }

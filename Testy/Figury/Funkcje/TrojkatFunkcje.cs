@@ -40,7 +40,7 @@ namespace Testy
             bool result = Program.TrojkatIstnieje(1, 4, 5);
 
             Assert.IsFalse(result);
-        }/*
+        }
         [TestMethod]
         public void Czy_trojkat_ma_wieksze_pole_od_drugiego()
         {
@@ -81,7 +81,7 @@ namespace Testy
 
             Assert.AreEqual(result, -1);
         }
-        */
+        
 
     }
 }
